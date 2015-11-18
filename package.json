@@ -1,0 +1,42 @@
+{
+  "name": "dotenv-touch",
+  "version": "0.0.0",
+  "description": "My incredible module",
+  "license": "MIT",
+  "repository": "ragingwind/dotenv-touch",
+  "author": {
+    "name": "ragingwind",
+    "email": "ragingwind@gmail.com",
+    "url": "ragingwind.me"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "rm -rf .tmp && xo && ava"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    ""
+  ],
+  "dependencies": {
+    "meow": "^3.4.2",
+    "object-assign": "^4.0.1",
+    "object-field-value": "0.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.3.0",
+    "xo": "^0.10.0"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
+  }
+}
