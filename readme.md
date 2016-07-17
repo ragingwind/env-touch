@@ -1,18 +1,18 @@
-# dotenv-touch [![Build Status](https://travis-ci.org/ragingwind/dotenv-touch.svg?branch=master)](https://travis-ci.org/ragingwind/dotenv-touch)
+# env-touch [![Build Status](https://travis-ci.org/ragingwind/env-touch.svg?branch=master)](https://travis-ci.org/ragingwind/env-touch)
 
-> Touch .env file from local environments and options
+> Touch env file from local environments and options
 
 
 ## Install
 
 ```
-$ npm install --save dotenv-touch
+$ npm install --save env-touch
 ```
 
 ## Usage
 
 ```js
-const touch = require('dotenv-touch');
+const touch = require('env-touch');
 
 touch({
   LANG: 'Us',
@@ -53,31 +53,11 @@ Characters for break a like aka CR/LF
 ## CLI
 
 ```
-$ npm install --global dotenv-touch
+$ npm install --global env-touch
 ```
 
 ```
-$ dotenv-touch --help
-
-Usage
-  $ dotenv-touch [environments] [options]
-
-Options
-  --process: true or list of name of environments in process.env to pick up
-  --output: path for env file
-
-Examples,
-  $ dotenv-touch API_KEY=YOUR_APIKEY PRODUCTION=false SIGNATURE_ID=YOUR_ID,
-  $ dotenv-touch API_KEY=YOUR_APIKEY PRODUCTION=false --output=./config,
-  $ dotenv-touch --process,
-  $ dotenv-touch --process=SHELL,LOGNAME,LANG,
-  $ TEST=1 node cli.js API_KEY=key PRODUCTION=\my production\ --process=SHELL,LOGNAME,LANG,TEST,
-  >> SHELL: \/bin/zsh\,
-  		LOGNAME: \ragingwind\,
-  		LANG: \en_US.UTF-8\,
-  		TEST: \1\,
-  		API_KEY: \key\,
-  		PRODUCTION: \my production\
+$ env-touch --help
 ```
 
 ## License

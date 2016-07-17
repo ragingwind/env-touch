@@ -1,42 +1,40 @@
 {
-  "name": "dotenv-touch",
+  "name": "env-touch",
   "version": "0.0.1",
-  "description": "My incredible module",
+  "description": "Touch env file from local environments and options",
   "license": "MIT",
-  "repository": "ragingwind/dotenv-touch",
+  "repository": "ragingwind/env-touch",
   "author": {
     "name": "ragingwind",
     "email": "ragingwind@gmail.com",
     "url": "ragingwind.me"
   },
-  "bin": "cli.js",
+  "bin": {
+    "env-touch": "cli.js"
+  },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=6.0"
   },
   "scripts": {
-    "test": "rm -rf .tmp && xo && ava"
+    "test": "xo && ava"
   },
   "files": [
     "index.js",
     "cli.js"
   ],
   "keywords": [
-    "cli-app",
-    "cli",
-    ""
+    "env",
+    "touch",
+    "config"
   ],
   "dependencies": {
-    "meow": "^3.4.2",
-    "object-assign": "^4.0.1",
-    "object-field-value": "0.0.1"
+    "field-value": "^1.0.1",
+    "meow": "^3.7.0",
+    "object-assign": "^4.1.0"
   },
   "devDependencies": {
-    "ava": "^0.3.0",
-    "xo": "^0.10.0"
-  },
-  "xo": {
-    "ignores": [
-      "test.js"
-    ]
+    "ava": "^0.15.2",
+    "os-random-tmpdir": "^0.1.1",
+    "xo": "^0.16.0"
   }
 }

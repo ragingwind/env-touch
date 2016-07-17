@@ -1,7 +1,7 @@
 'use strict';
 
-var filedValue = require('object-field-value');
-var fs = require('fs');
+const fs = require('fs');
+const fv = require('field-value');
 
 module.exports = function (objs, output, opts) {
 	if (typeof objs !== 'object') {
@@ -13,11 +13,11 @@ module.exports = function (objs, output, opts) {
 		output = null;
 	}
 
-	opts = opts || {
+	opts = Object.assign({}, opts, {
 		breakLine: '\n'
-	};
+	});
 
-	var text = filedValue(objs).join(opts.breakLine);
+	const text = fv.pairify(objs).join(opts.breakLine).replace(/"/g, '');
 
 	if (output) {
 		fs.writeFileSync(output, text);
