@@ -1,6 +1,6 @@
 {
   "name": "env-touch",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Touch env file from local environments and options",
   "license": "MIT",
   "repository": "ragingwind/env-touch",
